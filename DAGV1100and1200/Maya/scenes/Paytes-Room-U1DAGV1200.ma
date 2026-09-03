@@ -1,6 +1,6 @@
 //Maya ASCII 2027 scene
 //Name: Paytes-Room-U1DAGV1200.ma
-//Last modified: Wed, Sep 02, 2026 06:27:47 PM
+//Last modified: Wed, Sep 02, 2026 06:36:00 PM
 //Codeset: 1252
 requires maya "2027";
 requires -nodeType "aiOptions" -nodeType "aiAOVDriver" -nodeType "aiAOVFilter" -nodeType "aiImagerDenoiserOidn"
@@ -12,17 +12,17 @@ fileInfo "product" "Maya 2027";
 fileInfo "version" "2027";
 fileInfo "cutIdentifier" "202607171511-52c21617ee";
 fileInfo "osv" "Windows 11 Home v2009 (Build: 26200)";
-fileInfo "UUID" "120116B5-4657-AEC1-4342-DC8C6632E4EC";
+fileInfo "UUID" "EDE15C87-4B04-6C0A-9556-F3826205959F";
 createNode transform -s -n "persp";
 	rename -uid "A526C27F-4D88-AB8D-50F2-C1BE06E41B73";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" -15.595662886833459 8.4723594597330596 -13.569939703784163 ;
-	setAttr ".r" -type "double3" -15.938352840486075 5268.9999999986885 0 ;
+	setAttr ".t" -type "double3" -10.107874501511851 6.3341941798805586 -4.6679297262235488 ;
+	setAttr ".r" -type "double3" -6.9383528402758543 5279.4000000003707 0 ;
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "16962FC1-4CB2-B839-2D65-A19C136C2768";
 	setAttr -k off ".v" no;
 	setAttr ".fl" 34.999999999999993;
-	setAttr ".coi" 27.71334399982457;
+	setAttr ".coi" 18.032786245542752;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
@@ -33710,8 +33710,36 @@ createNode groupId -n "groupId301";
 createNode groupId -n "groupId302";
 	rename -uid "0F6E1DCD-4A57-0EB3-11F0-33B03F39F98E";
 	setAttr ".ihi" 0;
+createNode polyBevel3 -n "polyBevel1";
+	rename -uid "4FE28864-4D82-D49C-DD3F-9C9B46E14C5A";
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 50 "e[0]" "e[2]" "e[4]" "e[6]" "e[15]" "e[20]" "e[25]" "e[27]" "e[39]" "e[41]" "e[46:47]" "e[52]" "e[54]" "e[59:60]" "e[65]" "e[67]" "e[72:73]" "e[78]" "e[80]" "e[85:86]" "e[91]" "e[93]" "e[98:99]" "e[104]" "e[106]" "e[111:112]" "e[117]" "e[119]" "e[124:125]" "e[130]" "e[132]" "e[137:138]" "e[143]" "e[145]" "e[150:151]" "e[156]" "e[158]" "e[163:164]" "e[169]" "e[171]" "e[176:177]" "e[182]" "e[184]" "e[189:190]" "e[195]" "e[197]" "e[202:203]" "e[208]" "e[210]" "e[215:216]";
+	setAttr ".ix" -type "matrix" 0.9287994766206974 0 0 0 0 6.5370628926013197 0 0 0 0 3.0271450920508651 0
+		 6.5399351588807741 3.4407698843706811 5.3150243802975474 1;
+	setAttr ".ws" yes;
+	setAttr ".oaf" yes;
+	setAttr ".f" 0.099999999999999978;
+	setAttr ".at" 180;
+	setAttr ".sn" yes;
+	setAttr ".mv" yes;
+	setAttr ".mvt" 0.0001;
+	setAttr ".sa" 30;
+createNode polyBevel3 -n "polyBevel2";
+	rename -uid "272FA35F-4139-35F5-5731-99B25D58F3A2";
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 5 "e[8]" "e[11]" "e[199]" "e[210]" "e[362:365]";
+	setAttr ".ix" -type "matrix" 0.9287994766206974 0 0 0 0 6.5370628926013197 0 0 0 0 3.0271450920508651 0
+		 6.5399351588807741 3.4407698843706811 5.3150243802975474 1;
+	setAttr ".ws" yes;
+	setAttr ".oaf" yes;
+	setAttr ".f" 0.099999999999999978;
+	setAttr ".at" 180;
+	setAttr ".sn" yes;
+	setAttr ".mv" yes;
+	setAttr ".mvt" 0.0001;
+	setAttr ".sa" 30;
 createNode nodeGraphEditorInfo -n "hyperShadePrimaryNodeEditorSavedTabsInfo";
-	rename -uid "B9CD2752-4D6C-D903-DBEA-BEB7715A1226";
+	rename -uid "749CA918-42A9-D2DD-3C18-D392B3796AA3";
 	setAttr ".tgi[0].tn" -type "string" "Untitled_1";
 	setAttr ".tgi[0].vl" -type "double2" -1529.2756309188255 -1180.6380684178612 ;
 	setAttr ".tgi[0].vh" -type "double2" 1911.041378539207 1201.6382544879455 ;
@@ -33833,7 +33861,7 @@ connectAttr "pCube2_translateZ.o" "Shelf.tz";
 connectAttr "pCube2_scaleX.o" "Shelf.sx";
 connectAttr "pCube2_scaleY.o" "Shelf.sy";
 connectAttr "pCube2_scaleZ.o" "Shelf.sz";
-connectAttr "deleteComponent31.og" "ShelfShape.i";
+connectAttr "polyBevel2.out" "ShelfShape.i";
 connectAttr "groupId75.id" "Set2Shape.iog.og[0].gid";
 connectAttr ":initialShadingGroup.mwc" "Set2Shape.iog.og[0].gco";
 connectAttr "groupId74.id" "Set2Shape.ciog.cog[0].cgid";
@@ -34324,6 +34352,10 @@ connectAttr "standardSurface6.oc" "standardSurface6SG.ss";
 connectAttr "ShelfShape.iog" "standardSurface6SG.dsm" -na;
 connectAttr "standardSurface6SG.msg" "materialInfo6.sg";
 connectAttr "standardSurface6.msg" "materialInfo6.m";
+connectAttr "deleteComponent31.og" "polyBevel1.ip";
+connectAttr "ShelfShape.wm" "polyBevel1.mp";
+connectAttr "polyBevel1.out" "polyBevel2.ip";
+connectAttr "ShelfShape.wm" "polyBevel2.mp";
 connectAttr "standardSurface2SG.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[0].dn"
 		;
 connectAttr "standardSurface5SG.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[1].dn"
