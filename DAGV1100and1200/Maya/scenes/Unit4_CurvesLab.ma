@@ -1,6 +1,6 @@
 //Maya ASCII 2027 scene
-//Name: Paytes-Room-U1DAGV1200.ma
-//Last modified: Wed, Sep 16, 2026 10:01:04 PM
+//Name: Unit4_CurvesLab.ma
+//Last modified: Wed, Sep 16, 2026 10:01:12 PM
 //Codeset: 1252
 requires maya "2027";
 requires "stereoCamera" "10.0";
@@ -14,7 +14,7 @@ fileInfo "product" "Maya 2027";
 fileInfo "version" "2027";
 fileInfo "cutIdentifier" "202607171511-52c21617ee";
 fileInfo "osv" "Windows 11 Home v2009 (Build: 26200)";
-fileInfo "UUID" "71569F7C-4179-206B-80D3-C890ADA00697";
+fileInfo "UUID" "CC898EDA-4562-34AD-0967-5882DED5F036";
 createNode transform -s -n "persp";
 	rename -uid "A526C27F-4D88-AB8D-50F2-C1BE06E41B73";
 	setAttr ".v" no;
@@ -153923,7 +153923,7 @@ createNode groupId -n "groupId425";
 	rename -uid "39665568-4E3C-A3DC-F57A-69892E6C3C1A";
 	setAttr ".ihi" 0;
 createNode nodeGraphEditorInfo -n "hyperShadePrimaryNodeEditorSavedTabsInfo";
-	rename -uid "50B45AC8-4225-C686-75C5-75B33A9E16E1";
+	rename -uid "670BB851-4E6C-EB24-7661-E7B445364379";
 	setAttr ".tgi[0].tn" -type "string" "Untitled_1";
 	setAttr ".tgi[0].vl" -type "double2" -2588.6221777328028 -1246.4285218999519 ;
 	setAttr ".tgi[0].vh" -type "double2" 2292.193618083244 2133.3332485622859 ;
@@ -154066,6 +154066,17 @@ select -ne :hardwareRenderGlobals;
 	setAttr ".btrs" 512;
 select -ne :ikSystem;
 	setAttr -s 4 ".sol";
+select -ne :modelPanel4ViewSelectedSet;
+	setAttr ".ihi" 0;
+select -ne :modelPanel3ViewSelectedSet;
+	setAttr ".ihi" 0;
+	setAttr -s 2 ".dsm";
+select -ne :modelPanel2ViewSelectedSet;
+	setAttr ".ihi" 0;
+	setAttr -s 2 ".dsm";
+select -ne :modelPanel1ViewSelectedSet;
+	setAttr ".ihi" 0;
+	setAttr -s 2 ".dsm";
 connectAttr "groupId307.id" "RoomShape.iog.og[0].gid";
 connectAttr ":initialShadingGroup.mwc" "RoomShape.iog.og[0].gco";
 connectAttr "groupId308.id" "RoomShape.iog.og[1].gid";
@@ -154594,4 +154605,4 @@ connectAttr "groupId412.msg" ":initialShadingGroup.gn" -na;
 connectAttr "groupId413.msg" ":initialShadingGroup.gn" -na;
 connectAttr "groupId414.msg" ":initialShadingGroup.gn" -na;
 connectAttr "groupId425.msg" ":initialShadingGroup.gn" -na;
-// End of Paytes-Room-U1DAGV1200.ma
+// End of Unit4_CurvesLab.ma
